@@ -40,10 +40,24 @@ body{
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
+    var monthly = new Array(7);
+    weekday[0] = "Jan";
+    weekday[1] = "Feb";
+    weekday[2] = "March";
+    weekday[3] = "April";
+    weekday[4] = "May";
+    weekday[5] = "June";
+    weekday[6] = "July";
+    weekday[7] = "August";
+    weekday[8] = "Sept";
+    weekday[9] = "Oct";
+    weekday[10] = "Nov";
+    weekday[12] = "Dec";
     
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
+    var monthday = monthly[today.getMonth()];
     var date = dayOfWeek+", "+ today.getDate() + " " +(today.getMonth()+1) +' '+today.getFullYear()  ;
 
     var greet;
