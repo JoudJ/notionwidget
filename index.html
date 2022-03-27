@@ -3,10 +3,11 @@
     <title>Greeting Message</title> 
     <style>
 #lbl {
-    font-family: Century Gothic;
+    font-family: Avenir;
     font-size: large;
     color: #333333;
     padding: 5px;
+    font-weight: bold;
     border: 1px solid #000000;
     text-align: center;
     line-height: 1.5;
@@ -19,6 +20,8 @@
 }
 body{
     background-color: #ececec;
+    margin: 0;
+    padding: 0;
     border: 1px solid #000000;
 }
     </style>
@@ -41,7 +44,7 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var date = dayOfWeek+", "+ today.getDate() + " " +(today.getMonth()+1) +' '+today.getFullYear()  ;
 
     var greet;
 
@@ -53,6 +56,6 @@ body{
         greet = 'Good Evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
+        greet+=`<div id="date"> ${date}</div>`;
 </script> 
 </html>
